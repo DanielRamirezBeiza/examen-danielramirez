@@ -11,6 +11,8 @@ class BuildingController extends Controller
     public function index()
     {
 
+       
+
         $buildings = Building::all();
         return view ('building.index', compact('buildings'));
     }
@@ -23,7 +25,21 @@ class BuildingController extends Controller
 
     public function store(Request $request)
     {
-        $building = Building::create($request->all());
+
+        $data = $request->validate([
+            'nombre' =>'required',
+            'ciudad' => 'required',
+            'direccion' => 'required'
+        ]); 
+
+        $
+
+
+        $building = Building::create([
+            'nombre' => $data['nombre'],
+            'ciudad' => $data['ciudad'],
+            'direccion' => $data['dirección'],
+        ]);
         return redirect()->route('building.index');
     }
 

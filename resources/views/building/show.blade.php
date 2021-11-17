@@ -13,6 +13,8 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Número</th>
+                <th scope="col">Detalles</th>
+
                 
 
             </tr>
@@ -23,6 +25,7 @@
                     <tr>
                         <th scope="row">{{ $dpto->id }}</th>
                         <td>{{ $dpto->numero }}</td>
+                        <td><a class="btn btn-primary my-2" href="{{route('apartment.show', $dpto)}}" role="button">Detalles</a></td>
 
                     </tr>
                 @endforeach

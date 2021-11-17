@@ -17,10 +17,13 @@
             </tr>
         </thead>
         @foreach ($dptos as $dpto)
+        <tr>
             <th scope="row">{{ $dpto->id }}</th>
             <td>{{ $dpto->numero }}</td>
             <td>{{ $dpto->building->nombre }}</td>
             <td><a class="btn btn-primary my-2" href="{{route('apartment.show', $dpto)}}" role="button">Detalles</a></td>
-        @endforeach
+        
+        </tr>
+             @endforeach
 
     @endsection

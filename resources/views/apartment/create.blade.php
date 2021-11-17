@@ -19,7 +19,7 @@
             <option value="">--Seleccione--</option>
             
             @foreach($edificios as $id =>$edificio)
-            <option value="{{$edificio->id}}"> {{$edificio->id}} </option>
+            <option value="{{$edificio->id}}"> {{$edificio->nombre}} </option>
             @endforeach
             
         </select>
